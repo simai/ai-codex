@@ -21,6 +21,8 @@ Step 4. Starting a project
 - Begin with `playbook/00_ROUTER.md` and always apply `playbook/01_CORE.md`.
 - For a new project, use `playbook/10_ONBOARDING.md` and `playbook/20_PROJECT_SPEC_GUIDE.md`.
 
+When drafting a Codex task, use tracking tags only inside the task code block and include a Suggested commit message line near the end.
+
 Step 5. Working with archives
 - Packaging or receiving archives must follow `playbook/12_ARCHIVE_PROTOCOL.md`.
 - The archive must have a unique timestamped name and be stored outside the project root.

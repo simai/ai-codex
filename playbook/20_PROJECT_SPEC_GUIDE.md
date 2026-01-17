@@ -22,6 +22,9 @@ end of step #1
 #2
 Build the spec structure: goals, users, scenarios, non-functional requirements, integrations, data, security, localization, risks, AC, DoD, exclusions.
 end of step #2
+#2.1
+If the scope includes a user interface, outline the UX approach before writing tasks: user goals, core workflows, required functionality, and a draft layout based on available UI components and constraints.
+end of step #2.1
 #3
 Request missing information: inputs, constraints, sources of truth, access, deadlines. If not provided, record ASSUMPTIONS explicitly.
 end of step #3

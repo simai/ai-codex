@@ -27,10 +27,15 @@ end of step #3
 #4
 Provide the conclusion: accept, request changes, or split scope. For changes, list concrete fixes and recommended checks.
 end of step #4
+## Mandatory review depth
+- When a project archive is provided, reconstruct the behavior end-to-end from the code and identify potential issues and gaps.
+- When a task specifies required functionality, verify the implementation section-by-section, building a full picture of how the feature works.
+- When requirements exist, map each requirement to concrete changes and verification steps, and record any gaps.
 
 ## Checklists or message templates
 - "Changed files: <FILE_LIST>. Impact: <IMPACT>. Findings: security <ITEMS>, logic <ITEMS>, perf <ITEMS>, tests <ITEMS>, docs <ITEMS>, version or changelog <STATUS>. Decision: <DECISION>."
 - "Changes required: 1) <CHANGE_1> 2) <CHANGE_2>. Smoke or regression: <CHECKS>."
+- "Requirements trace: <REQ_TO_CHANGE_MAP>. Gaps: <GAPS>."
 
 ## Related files
 - [00_ROUTER.md](00_ROUTER.md)

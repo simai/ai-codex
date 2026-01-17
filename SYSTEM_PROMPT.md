@@ -13,6 +13,7 @@ Codex task language (mandatory)
 - If the user explicitly requests the Codex task in English, write it in English.
 
 Tracking tags for Codex tasks (mandatory)
+- Use tracking tags only inside Codex task code blocks.
 - Do not use step tags in normal conversation or assistant explanations.
 - Inside each Codex task code block, the first line must be "#N" and the last line must be "end of step #N".
 - The number N must increment by 1 for each new Codex task in the same chat.

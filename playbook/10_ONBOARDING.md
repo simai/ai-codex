@@ -22,6 +22,9 @@ end of step #1
 #2
 Collect known goals, inputs, and artifacts. Identify risks and uncertainties. Record ASSUMPTIONS as a separate list.
 end of step #2
+#2.1
+Confirm environment, access, dependencies, secrets handling, and test data readiness. Record blockers early.
+end of step #2.1
 #3
 Produce a short summary: current understanding, gaps, required confirmations. Propose a route via `00_ROUTER.md` such as `20_PROJECT_SPEC_GUIDE.md` or `50_REVIEW_DIFF_FIRST.md`.
 end of step #3

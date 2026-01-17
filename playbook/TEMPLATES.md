@@ -1,5 +1,5 @@
 # TEMPLATES
-Keywords: templates, project brief template, project spec template, codex task template, changelog template, smoke test template, state summary template, copy paste, placeholders
+Keywords: templates, project brief template, project spec template, codex task template, tracking tags, suggested commit message, changelog template, smoke test template, state summary template, copy paste, placeholders
 
 ## Project Brief template (1–2 pages)
 ```
@@ -60,6 +60,11 @@ The number N increments by 1 for each new Codex task and continues after handoff
 - <LOCAL_LABEL> (Files and directories): <LIST>
 - <LOCAL_LABEL> (Commands or scripts): <COMMANDS>
 - <LOCAL_LABEL> (Additional materials): <MATERIALS>
+- <LOCAL_LABEL> (Dependencies): <DEPENDENCIES>
+- <LOCAL_LABEL> (Environment and access): <ENV_ACCESS>
+
+# Definition of Ready
+- <LOCAL_LABEL> (Prerequisites): <READY_LIST>
 
 # Expected result
 - <LOCAL_LABEL> (Expected outcomes): <CRITERIA>
@@ -69,6 +74,11 @@ The number N increments by 1 for each new Codex task and continues after handoff
 - <LOCAL_LABEL> (Smoke): <SMOKE_STEPS>
 - <LOCAL_LABEL> (Regression minimum): <REGRESSION_STEPS>
 - <LOCAL_LABEL> (Additional checks): <CHECK_COMMANDS>
+
+# Risk and Rollback
+- <LOCAL_LABEL> (Risk level): <LOW_MEDIUM_HIGH>
+- <LOCAL_LABEL> (Rollback or backout plan): <PLAN>
+- <LOCAL_LABEL> (Observability or logging): <EXPECTATIONS>
 
 # Rules
 - Ask questions if unclear, do not guess.
@@ -112,6 +122,7 @@ Date and context version: <DATE>
 Project goal: <GOAL>
 Done: <DONE_LIST>
 In progress: <IN_PROGRESS_LIST>
+Decisions and tradeoffs: <DECISIONS>
 Open questions: <QUESTIONS>
 ASSUMPTIONS: <ASSUMPTIONS_LIST>
 Risks and blockers: <RISKS>

@@ -1,5 +1,5 @@
 # 40_CODEX_TASKING
-Keywords: codex task, task specification, single code block, allowed scope, do not touch, acceptance criteria, checks, tests, smoke test, version bump, changelog update, no drive-by improvements
+Keywords: codex task, task specification, single code block, tracking tags, suggested commit message, allowed scope, do not touch, acceptance criteria, checks, tests, smoke test, version bump, changelog update, no drive-by improvements
 
 ## When to use
 - Need to formulate a Codex task with clear constraints and checks.
@@ -12,7 +12,9 @@ Keywords: codex task, task specification, single code block, allowed scope, do n
 ## Outputs
 - Self-contained Codex task in a single code block with a target version.
 - Checks list (smoke and regression) and acceptance criteria.
+- Tracking tags only inside the code block and a Suggested commit message line included.
 - Clarifying questions when ambiguity is detected.
+- Definition of Ready and risk/rollback details when applicable.
 
 ## Procedure (steps)
 #1
@@ -21,6 +23,15 @@ end of step #1
 #2
 Collect inputs: goal, context, target version, files and directories in scope, DoNotTouch, constraints on time and tests, logging and secret requirements.
 end of step #2
+#2.1
+If the task is UI-related, include a brief UX intent block: user goals, key flows, required UI elements, and a high-level layout plan aligned with available tools.
+end of step #2.1
+#2.2
+Confirm Definition of Ready: environment, access, dependencies, test data, CI limits, and secrets handling. If any are missing, ask before drafting.
+end of step #2.2
+#2.3
+If the scope is large or risky, split into smaller tasks with clear boundaries and dependencies. Avoid multi-domain bundles.
+end of step #2.3
 #3
 Draft the task in one code block using `TEMPLATES.md`. Include tasks, steps, expectations, checks, smoke, no drive-by improvements, expected response format, target version, and requirement to update target project VERSION and CHANGELOG if part of the task.
 end of step #3

@@ -2,11 +2,64 @@
 
 Rule: cumulative log, newest versions on top. Keep sections Added, Changed, Fixed, Security, Docs for every version.
 
+## [0.5.8] - 2026-01-17
+### Added
+- Roadmap cadence prompt after MINOR releases.
+- Decision log field in state summary template.
+- AC/DoD to checks traceability item in testing guidance.
+### Changed
+- Codex tasking now requires Definition of Ready, task splitting for large or risky scope, and UI UX intent for UI tasks.
+- Codex task template includes dependencies, environment access, Definition of Ready, risk or rollback, and observability expectations.
+- Review guidance now requires requirement to change traceability.
+- Bitrix profile adds admin prolog or epilog usage, admin menu attachment, and delete data checkbox on uninstall.
+### Fixed
+- N/A
+### Security
+- N/A
+### Docs
+- N/A
+
+## [0.5.7] - 2026-01-09
+### Added
+- Bitrix Marketplace requirement for PARTNER_NAME and PARTNER_URI assignment.
+### Changed
+- N/A
+### Fixed
+- N/A
+### Security
+- N/A
+### Docs
+- N/A
+
+## [0.5.6] - 2026-01-09
+### Added
+- N/A
+### Changed
+- Bitrix profile adds Mail and Notifications task standard with mandatory diagnostics and critical checks.
+### Fixed
+- N/A
+### Security
+- N/A
+### Docs
+- N/A
+
+## [0.5.5] - 2026-01-09
+### Added
+- N/A
+### Changed
+- Bitrix profile adds mail and notifications task standard with diagnostics and critical rules.
+### Fixed
+- N/A
+### Security
+- N/A
+### Docs
+- N/A
+
 ## [0.5.4] - 2026-01-09
 ### Added
-- Suggested commit message line required in every Codex task.
+- Codex task tracking tag usage and suggested commit message requirement.
 ### Changed
-- Step numbers for Codex tasks increment by 1 and continue across handoff based on history.
+- Bitrix profile updated with temp files, export filename convention, admin UI tabs, and partner name rule without SVG.
 ### Fixed
 - N/A
 ### Security

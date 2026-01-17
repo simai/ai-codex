@@ -17,6 +17,8 @@ Keywords: planning, roadmap, semver, iteration, milestone, backlog, prioritizati
 
 ## Target project versioning rule
 - Every Codex task requires a target project version bump and an entry in the target project CHANGELOG.
+## Roadmap cadence
+- After each MINOR release (or at least every two MINOR releases), prompt the user to update or confirm the roadmap for upcoming MINOR versions.
 - Choose the level: MAJOR for incompatible API or contract changes or feature removals, MINOR for new functionality without breaking compatibility, PATCH for fixes and clarifications without contract changes.
 - Exceptions require explicit user confirmation. Documentation-only work should still bump PATCH if it changes delivered docs.
 

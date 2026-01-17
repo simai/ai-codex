@@ -15,13 +15,14 @@ Keywords: long chat, handoff, export chat, project summary, context snapshot, re
 - Project state summary using `TEMPLATES.md`.
 - Near-term next steps and dependencies.
 - Instructions for chat export and restart in a new session.
+- Decision log with tradeoffs and declined options.
 
 ## Procedure (steps)
 #1
 Apply `01_CORE.md` and active profiles. Gather key facts: goals, done, in progress, blockers, risks, and checks. Confirm the current archive.
 end of step #1
 #2
-Produce a state summary using the template: context, decisions, open questions, next steps, links to spec, roadmap, tests, recorded ASSUMPTIONS, archive name with timestamp.
+Produce a state summary using the template: context, decision log (tradeoffs and declined options), open questions, next steps, links to spec, roadmap, tests, recorded ASSUMPTIONS, archive name with timestamp.
 end of step #2
 #3
 Offer chat export to MD or PDF via a browser extension such as ChatGPT Exporter or equivalent. Provide the summary and archive name.
@@ -31,7 +32,7 @@ When a new chat starts, first read the summary and confirm the archive per `12_A
 end of step #4
 
 ## Checklists or message templates
-- "State summary ready: context <CONTEXT>, decisions <DECISIONS>, open questions <QUESTIONS>, next steps <NEXT_STEPS>, risks <RISKS>, checks <CHECKS>, archive <ARCHIVE_NAME>. Any corrections?"
+- "State summary ready: context <CONTEXT>, decisions and tradeoffs <DECISIONS>, open questions <QUESTIONS>, next steps <NEXT_STEPS>, risks <RISKS>, checks <CHECKS>, archive <ARCHIVE_NAME>. Any corrections?"
 - "Chat export: saving to MD or PDF via an extension, attaching the summary and archive name. In a new chat we start by reading the summary and confirming the archive."
 
 ## Related files

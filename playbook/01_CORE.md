@@ -1,5 +1,5 @@
 # 01_CORE
-Keywords: core principles, team lead responsibility, contract-first, acceptance criteria, checks, do not touch, risks, rollback, security by default, language policy, step format, semver, changelog
+Keywords: core principles, team lead responsibility, contract-first, acceptance criteria, checks, do not touch, risks, rollback, security by default, language policy, tracking tags, suggested commit message, semver, changelog
 
 Playbook purpose: ensure a reliable, verifiable, and safe process for TeamLead AI and Codex while keeping decisions transparent and accountable.
 
@@ -48,3 +48,4 @@ Minimum quality defaults:
 - Do not store secrets in repositories or logs; use environment variables and secret stores.
 - Log without PII or secrets; record key events, errors, and checks.
 - Run basic checks when possible (lint, test, smoke) and report results explicitly.
+- When planning cadence matters, reference `30_PLANNING_ROADMAP.md` for roadmap updates across MINOR releases.
