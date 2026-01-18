@@ -133,3 +133,45 @@ Links to spec, roadmap, tasks: <LINKS>
 ```
 
 Note: do not use tracking tags outside Codex task code blocks.
+
+## PROJECT_STANDARDS.md template (standards contract)
+Use this template to lock down non‑negotiables early. Keep it short and explicit.
+
+```
+# Project Standards Contract
+
+## Stack and profile
+- Platform / CMS / framework: <BITRIX_LARAVEL_CUSTOM>
+- Active TeamLead profile: <PROFILE_NAME>
+- Key versions: PHP <X>, Bitrix <X>, DB <X>
+
+## Repository / module layout rules
+- Root location: <PATHS>
+- Non-negotiables for folders and entry points: <RULES>
+
+## Localization / i18n rules
+- Supported languages: <ru,en,...>
+- Bitrix Loc usage required: yes/no
+- Message key naming: <CONVENTION>
+- Files that must be localized: <LIST>
+
+## Admin / backoffice rules
+- Where real admin pages live: <PATH>
+- Where proxy/published admin files live: <PATH>
+- Prolog/epilog responsibilities: <WHO_INCLUDES_WHAT>
+
+## Security and data
+- Permissions model: <RIGHTS> (Bitrix: GetGroupRight / tasks / roles)
+- CSRF/session requirements: <RULES>
+- Secrets handling: <ENV_SECRET_STORE>
+- Logging: no PII/no secrets, error levels, retention
+
+## Quality gates
+- Smoke test steps: <STEPS>
+- Regression minimum: <CHECKLIST>
+- Automated checks (if any): <COMMANDS>
+
+## Out of scope
+- <BULLETS>
+```
+

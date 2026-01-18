@@ -38,3 +38,16 @@ end of step #3
 - [01_CORE.md](01_CORE.md)
 - [20_PROJECT_SPEC_GUIDE.md](20_PROJECT_SPEC_GUIDE.md)
 - [50_REVIEW_DIFF_FIRST.md](50_REVIEW_DIFF_FIRST.md)
+
+## Stack + standards discovery (mandatory)
+During onboarding, always do:
+- Detect platform/profile signals from the archive and the user's wording (see `PROFILES_OVERVIEW.md`).
+- Ask targeted questions to remove ambiguity:
+  - What platform/framework/CMS is this (Bitrix? Laravel? custom)?
+  - Deployment location assumptions (e.g., Bitrix: `/local/modules` vs `/bitrix/modules`)?
+  - Required languages (ru/en/...), marketplace constraints, and coding standards.
+  - Security constraints (auth, permissions, secrets, PII).
+
+Output a short "Standards Contract" proposal:
+- Create or request a `PROJECT_STANDARDS.md` (template in `TEMPLATES.md`) that captures non-negotiables (structure, localization, security, UX rules).
+- Treat it as the reference for every Codex task and every review.

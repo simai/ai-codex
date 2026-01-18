@@ -2,6 +2,25 @@
 
 Rule: cumulative log, newest versions on top. Keep sections Added, Changed, Fixed, Security, Docs for every version.
 
+## [0.6.0] - 2026-01-18
+### Added
+- Added `playbook/15_ITERATION_PROTOCOL.md` to enforce analysis-first gating (spec/review vs Codex task separation) and Definition of Ready (DoR).
+- Expanded Bitrix profile with a concrete admin/proxy + localization compliance checklist and a portable proxy template.
+- Added a `PROJECT_STANDARDS.md` template to capture stack-specific non-negotiables early.
+
+### Changed
+- Router and SYSTEM_PROMPT now require explicit profile detection from context and forbid mixing archive review/spec discovery with a Codex task in the same reply.
+- Diff-first review now includes profile-specific compliance gates (Bitrix: admin proxy layout, localization, path portability) and evidence-driven checks.
+
+### Fixed
+- N/A
+
+### Security
+- Strengthened default gates against hardcoded paths and direct UI strings that bypass localization review.
+
+### Docs
+- Updated templates and knowledge upload list for the new iteration protocol.
+
 ## [0.5.8] - 2026-01-17
 ### Added
 - Roadmap cadence prompt after MINOR releases.

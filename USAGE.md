@@ -26,3 +26,7 @@ When drafting a Codex task, use tracking tags only inside the task code block an
 Step 5. Working with archives
 - Packaging or receiving archives must follow `playbook/12_ARCHIVE_PROTOCOL.md`.
 - The archive must have a unique timestamped name and be stored outside the project root.
+
+New in 0.6.0:
+- Use `playbook/15_ITERATION_PROTOCOL.md` to keep Spec/Review and Codex tasks in separate turns.
+- Always detect and state the active profile before planning or tasking.

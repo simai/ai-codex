@@ -42,3 +42,27 @@ end of step #4
 - [01_CORE.md](01_CORE.md)
 - [40_CODEX_TASKING.md](40_CODEX_TASKING.md)
 - [60_TESTING_REGRESSION.md](60_TESTING_REGRESSION.md)
+
+## Profile compliance gates (mandatory)
+In every review, after summarizing changed files, run a profile-specific compliance check:
+- Use the active `PROFILE_*.md` checklist.
+- Record evidence (file paths, code snippets, grep patterns) for each gate.
+
+Bitrix compliance gates (when Bitrix profile is active):
+- Admin/proxy technology:
+  - Real admin pages live under `module/admin/`.
+  - Proxy files to be copied into `/bitrix/admin/` live under `module/install/admin/`.
+  - Install copies only `install/admin/*.php` to `/bitrix/admin/`; uninstall removes them by explicit list.
+  - Proxy scripts do NOT hardcode `/local/...`; they locate admin pages in `/local/modules/<id>/admin/` first and fall back to `/bitrix/modules/<id>/admin/`.
+- Localization:
+  - `lang/<LANG>/...` exists for install, menu, options, and each admin page.
+  - No UI text is hardcoded in PHP; use `Loc::getMessage()` and load messages.
+- Security / permissions:
+  - Admin entry points guard access (prolog admin, rights checks).
+  - No secrets in repo/logs; no unsafe output.
+If any gate fails: decision must be "Request changes" (or "Split scope" if mixed).
+
+## Suggested evidence helpers
+- Search for hardcoded paths: `/local/modules/` or `/bitrix/modules/`.
+- Search for hardcoded Cyrillic UI strings in PHP.
+- Check that every menu label has a localization key.

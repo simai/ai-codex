@@ -23,3 +23,10 @@ Conflict and priority rules:
 Use in Codex tasks:
 - Explicitly state the active profile and its key rules in the task.
 - If the profile is not confirmed, ask the user before proceeding.
+
+## Profile detection gate (mandatory)
+- For every new archive or project, you must explicitly detect and state the active profile.
+- Use both:
+  - Context signals (folders, configs, dependencies)
+  - User language and domain terminology
+- If detection is uncertain: ask targeted questions and record ASSUMPTIONS before tasking.

@@ -186,3 +186,74 @@ Key rules to preserve:
 - In `install/index.php`: `PARTNER_NAME` must be a plain text string, example "SIMAI", and `PARTNER_URI` must be "https://simai.ru".
 - Module initial version on creation: `1.0.0` (SemVer).
 - Regular security and performance audits; convert results into tasks and add to the roadmap.
+
+## Admin/proxy publishing (portable, marketplace-friendly)
+Preferred structure (keeps module clean and proxies explicit):
+- Real admin page scripts: `local/modules/<MODULE_ID>/admin/*.php`
+- Proxy scripts published into `/bitrix/admin/`: `local/modules/<MODULE_ID>/install/admin/*.php`
+
+Install/uninstall rules:
+- `DoInstall()` copies only `install/admin/*.php` into `/bitrix/admin/`.
+- `DoUninstall()` deletes those proxy files from `/bitrix/admin/` by explicit list (never wildcard delete).
+
+Proxy requirements:
+- Must NOT hardcode `/local/...` paths.
+- Must try to include the real admin page from:
+  1) `/local/modules/<MODULE_ID>/admin/<page>.php`
+  2) `/bitrix/modules/<MODULE_ID>/admin/<page>.php`
+- Must include admin prolog/epilog and set module name:
+  - `define('ADMIN_MODULE_NAME', '<MODULE_ID>');`
+  - `require $_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_admin_before.php';`
+  - `\Bitrix\Main\Loader::includeModule('<MODULE_ID>')`
+  - `require $_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/epilog_admin.php';`
+
+Template (proxy script skeleton):
+```php
+<?php
+define('ADMIN_MODULE_NAME', '<MODULE_ID>');
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_admin_before.php';
+
+if (!\Bitrix\Main\Loader::includeModule('<MODULE_ID>')) {
+    \CAdminMessage::ShowMessage('Module <MODULE_ID> is not installed.');
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_admin.php';
+    return;
+}
+
+$local = $_SERVER['DOCUMENT_ROOT'] . '/local/modules/<MODULE_ID>/admin/<PAGE>.php';
+$bitrix = $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/<MODULE_ID>/admin/<PAGE>.php';
+$target = file_exists($local) ? $local : $bitrix;
+
+if (!file_exists($target)) {
+    \CAdminMessage::ShowMessage('Admin page not found: <PAGE>.php');
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_admin.php';
+    return;
+}
+
+require $target;
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_admin.php';
+```
+
+Note: In this pattern, the real admin scripts under `module/admin/` should NOT include prolog/epilog again. They should render the page body and rely on the proxy to wrap prolog/epilog.
+
+## Localization (mandatory)
+- All UI strings in admin/menu/options/install/admin pages must be localized.
+- Use `\Bitrix\Main\Localization\Loc`:
+  - `Loc::loadMessages(__FILE__);`
+  - `Loc::getMessage('KEY')`
+- Store messages in `lang/<LANG>/<relative_path_to_file>.php`.
+
+Minimum localization coverage:
+- `install/index.php` (module name/description, install/uninstall messages)
+- `admin/menu.php` (menu labels, titles)
+- every admin page in `admin/*.php`
+- `options.php` and any settings pages
+
+Common failure gates:
+- Hardcoded Russian/English UI strings in PHP.
+- Missing `lang/ru/...` files for entry points.
+
+Key naming suggestion:
+- Prefix by module ID in uppercase with dots replaced by underscores, e.g. `SIMAI_AI_MENU_TITLE`, `SIMAI_AI_QUEUE_TITLE`.
+

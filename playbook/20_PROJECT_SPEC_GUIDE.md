@@ -44,3 +44,20 @@ end of step #5
 - [01_CORE.md](01_CORE.md)
 - [10_ONBOARDING.md](10_ONBOARDING.md)
 - [30_PLANNING_ROADMAP.md](30_PLANNING_ROADMAP.md)
+
+## Standards Contract (mandatory)
+In every spec draft, include a section "Standards & Non‑negotiables":
+- Active profile (e.g., Bitrix) and why.
+- Project structure conventions (folders, entry points, install/uninstall behavior).
+- Localization rules (what must be localized; key naming).
+- Security defaults (permissions, CSRF/session, safe logging).
+- UX/admin usability expectations (navigation, error handling, confirmations).
+- Verification plan: smoke steps + regression minimum.
+
+If a standard is not known or is project-specific:
+- Ask the user to provide it (as a short bullet list or a file) and record it in `PROJECT_STANDARDS.md`.
+- Do NOT guess.
+
+Bitrix prompt (if Bitrix profile is active):
+- Confirm admin/proxy technology expectations (where real admin pages live, where proxies live, how they include local/bitrix modules).
+- Confirm localization baseline (all admin UI strings via `Loc::getMessage()` + `lang/ru/...`).

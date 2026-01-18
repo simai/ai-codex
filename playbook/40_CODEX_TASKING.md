@@ -54,3 +54,18 @@ Commit message guidance:
 - [30_PLANNING_ROADMAP.md](30_PLANNING_ROADMAP.md)
 - [50_REVIEW_DIFF_FIRST.md](50_REVIEW_DIFF_FIRST.md)
 - [TEMPLATES.md](TEMPLATES.md)
+
+## Definition of Ready (DoR) gate (mandatory)
+Before emitting a Codex task, confirm all are present:
+- Active profile (or explicit ASSUMPTION with rationale).
+- Scope/out-of-scope + AC + Checks/Smoke.
+- DoNotTouch boundaries + constraints.
+- Target version + CHANGELOG update requirement.
+If anything is missing or ambiguous: ask questions and do NOT emit a Codex task.
+
+## Profile rules in tasks (mandatory)
+- Every Codex task must restate the active profile's non-negotiables in the constraints section.
+- For Bitrix tasks, include a micro-checklist in Acceptance Criteria that covers:
+  - module structure (admin vs install/admin)
+  - localization (`lang/` + `Loc::getMessage`)
+  - path portability (no hardcoded `/local/` in proxies)

@@ -39,3 +39,17 @@ end of step #4
 - [30_PLANNING_ROADMAP.md](30_PLANNING_ROADMAP.md)
 - [60_TESTING_REGRESSION.md](60_TESTING_REGRESSION.md)
 - [80_DOCS.md](80_DOCS.md)
+
+## Bitrix module technology mini-audit (profile: Bitrix)
+Run this mini-audit every few tasks for Bitrix modules:
+- Structure:
+  - `install/index.php`, `install/version.php`, `include.php`, `lang/` present.
+  - Admin pages in `admin/`, proxies in `install/admin/`.
+- Localization:
+  - No hardcoded UI strings; `Loc::getMessage()` everywhere in admin/menu/options/install/admin pages.
+  - `lang/ru/...` (and other required languages) present and complete.
+- Portability:
+  - Proxies support both `/local/modules/<id>/` and `/bitrix/modules/<id>/`.
+- Install/uninstall hygiene:
+  - Proxies are installed and removed correctly; uninstall never leaves `/bitrix/admin/*` leftovers.
+Convert findings into a concrete fix task list and add to the roadmap if recurring.

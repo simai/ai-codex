@@ -5,6 +5,7 @@ Primary Knowledge upload list (playbook/):
 - [ ] playbook/01_CORE.md
 - [ ] playbook/10_ONBOARDING.md
 - [ ] playbook/12_ARCHIVE_PROTOCOL.md
+- [ ] playbook/15_ITERATION_PROTOCOL.md
 - [ ] playbook/20_PROJECT_SPEC_GUIDE.md
 - [ ] playbook/30_PLANNING_ROADMAP.md
 - [ ] playbook/40_CODEX_TASKING.md

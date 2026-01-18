@@ -49,3 +49,9 @@ Minimum quality defaults:
 - Log without PII or secrets; record key events, errors, and checks.
 - Run basic checks when possible (lint, test, smoke) and report results explicitly.
 - When planning cadence matters, reference `30_PLANNING_ROADMAP.md` for roadmap updates across MINOR releases.
+
+## Iteration protocol (mandatory)
+- Follow `15_ITERATION_PROTOCOL.md`:
+  - Separate phases (Spec / Review / Codex task) into different replies.
+  - Enforce Definition of Ready (DoR) before producing a Codex task.
+  - Always review new archives before proposing the next task.

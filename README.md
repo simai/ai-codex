@@ -10,3 +10,6 @@ How to use:
 Playbook flow: start with `playbook/00_ROUTER.md`, then apply `playbook/01_CORE.md`, then select the relevant situation modules. For archives, always use `playbook/12_ARCHIVE_PROTOCOL.md`.
 
 Playbook updates: any change requires a version bump in `VERSION` and a new entry in `CHANGELOG.md` following SemVer. New entries go on top.
+
+New module:
+- `playbook/15_ITERATION_PROTOCOL.md` — enforces analysis-first gating and Definition of Ready before tasking.

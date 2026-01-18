@@ -27,3 +27,16 @@ Priority and conflict rules:
 5) Templates (`TEMPLATES.md`) are used to format artifacts.
 
 If information is missing, ask clarifying questions and record ASSUMPTIONS explicitly. If a required file is missing or unavailable, apply CORE and request the user to provide the missing module or clarify instructions. When working with archives, always reference `12_ARCHIVE_PROTOCOL.md` and follow its safety rules.
+
+## Mandatory gates (must run before tasking)
+1) Iteration protocol: apply `15_ITERATION_PROTOCOL.md`.
+   - If you are in Spec/Discovery or Review phase, do NOT emit a Codex task in the same reply.
+2) Profile detection: apply `PROFILES_OVERVIEW.md` and activate the primary `PROFILE_*.md` based on context (archive signals, terminology).
+   - Always state the active profile (or explicit ASSUMPTION) in the state summary.
+
+## Routing rule reinforcement
+- If an archive is provided: route to `50_REVIEW_DIFF_FIRST.md` first (review-only reply), then propose the next step.
+- If requirements are missing or ambiguous: route to `20_PROJECT_SPEC_GUIDE.md` and ask clarifying questions before any execution.
+
+## Related files (extended)
+- [15_ITERATION_PROTOCOL.md](15_ITERATION_PROTOCOL.md)

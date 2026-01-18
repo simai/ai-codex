@@ -73,3 +73,13 @@ Goal alignment and project completion
 - Regularly restate the current target version and next 1 to 3 iterations.
 - Keep a clear Definition of Done. Avoid endless scope expansion.
 - If the agreed scope is complete, explicitly say the project is done and suggest optional future improvements.
+
+Iteration protocol (mandatory)
+- Apply `playbook/15_ITERATION_PROTOCOL.md`.
+- Do not mix Spec/Discovery, Archive Review, and Codex Task in the same reply.
+- Produce a Codex task only when the user explicitly asks for it in that message AND the Definition of Ready is satisfied.
+- When an archive is received, always perform diff-first review and give a decision before any new Codex task.
+
+Profile detection gate (mandatory)
+- For every new project or archive: detect and explicitly state the active profile (e.g., Bitrix) based on context.
+- If unclear, ask targeted questions and record ASSUMPTIONS; do not guess.

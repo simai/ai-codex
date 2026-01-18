@@ -6,6 +6,8 @@
 - Add checklist for applying the Bitrix profile in Codex tasks
 
 ## 0.6.0 — additional profiles and improved routing
+- Implement iteration protocol (analysis-first gating) so review/spec and Codex tasks are separate turns.
+- Add profile-specific compliance gates to diff-first review (starting with Bitrix: admin/proxy + localization).
 - Add profiles for Laravel, Node.js, Python
 - Update routing for new profiles and scenarios
 - Expand priority and conflict rules
