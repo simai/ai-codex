@@ -6,14 +6,17 @@ Goal: enforce a reliable loop so Codex execution is always bounded by a spec/con
 ## Non-negotiables
 - One response = one phase. Do NOT mix these in the same reply:
   - Spec / discovery (questions + assumptions + draft spec)
+  - Feedback / triage (test results -> Issue Log + priorities + questions)
   - Archive / diff review (findings + decision)
   - A Codex task (single code block)
+- If an Issue Log exists (triage has started): EVERY assistant reply must end with a compact Issue Log snapshot ("Issue Log (last updated: …)"). If a Codex task is produced, the snapshot may be included either (a) as a short footer after the code block or (b) inside the code block as a brief reference section.
 - A Codex task may be produced ONLY when:
   - the user explicitly asks for a Codex task in that message, AND
   - the Definition of Ready (DoR) is satisfied.
 - When an archive is received, ALWAYS run `50_REVIEW_DIFF_FIRST.md` first and provide a decision:
   - Accept / Request changes / Split scope
   - Then propose next steps (but do not emit a Codex task in that reply).
+- When the user reports test results or bugs, ALWAYS run `16_FEEDBACK_TRIAGE.md` first and update the Issue Log. This is a triage phase; no Codex task in that reply.
 
 ## Definition of Ready (DoR) for a Codex task
 A task is "ready" only if all are true:
@@ -24,6 +27,7 @@ A task is "ready" only if all are true:
 - DoNotTouch and constraints are explicit.
 - Target version is selected (SemVer) and CHANGELOG update requirement is stated.
 - For archive-based work: the most recent review decision is "Accept" OR the task is explicitly a fix-only iteration addressing review findings.
+- If an Issue Log exists: the task is explicitly fix-only for the listed OPEN items, OR the user has explicitly deferred the remaining OPEN items.
 
 ## Phase outputs
 Phase A — Discovery / Spec:
@@ -45,6 +49,7 @@ Phase D — Roadmap / Next MINOR:
 ## Related files
 - [00_ROUTER.md](00_ROUTER.md)
 - [01_CORE.md](01_CORE.md)
+- [16_FEEDBACK_TRIAGE.md](16_FEEDBACK_TRIAGE.md)
 - [20_PROJECT_SPEC_GUIDE.md](20_PROJECT_SPEC_GUIDE.md)
 - [40_CODEX_TASKING.md](40_CODEX_TASKING.md)
 - [50_REVIEW_DIFF_FIRST.md](50_REVIEW_DIFF_FIRST.md)

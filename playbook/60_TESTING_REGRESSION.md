@@ -15,6 +15,7 @@ Keywords: testing strategy, smoke test, regression testing, unit tests, integrat
 - Test results: what was run and outcomes.
 - Updated regression checklist for future releases.
 - Traceability between AC/DoD and smoke or regression checks.
+- If user feedback is provided: updated Issue Log and mapping of issue IDs to focused re-test steps.
 
 ## Procedure (steps)
 #1
@@ -28,6 +29,9 @@ Define regression: negative cases, compatibility, configurations, and data. Map 
 end of step #3
 #4
 For bug fixes, add a test or regression item. Record what runs and the expected behavior.
+If the user provides manual test feedback, route to `16_FEEDBACK_TRIAGE.md` and ensure every reported item becomes either:
+- an Issue Log entry, or
+- a regression item (or both).
 end of step #4
 #5
 Report results: what ran, conclusions, and what remains uncovered. Propose automation when possible and safe.
@@ -41,6 +45,7 @@ end of step #5
 ## Related files
 - [00_ROUTER.md](00_ROUTER.md)
 - [01_CORE.md](01_CORE.md)
+- [16_FEEDBACK_TRIAGE.md](16_FEEDBACK_TRIAGE.md)
 - [50_REVIEW_DIFF_FIRST.md](50_REVIEW_DIFF_FIRST.md)
 - [70_AUDITS.md](70_AUDITS.md)
 - [TEMPLATES.md](TEMPLATES.md)

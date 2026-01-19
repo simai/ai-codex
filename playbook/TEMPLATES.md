@@ -116,6 +116,42 @@ Step 3: action <ACTION_3> → expected <EXPECTED_3>
 If a failure occurs, capture logs or screenshots and note the step and expected outcome.
 ```
 
+## User Test Feedback template
+Use this template when asking the user to verify fixes. It produces actionable feedback and reduces re-testing noise.
+
+```
+Environment: <BITRIX_VERSION, BROWSER, ROLE, OTHER>
+Tested version/archive: <VERSION_OR_ARCHIVE>
+
+For each issue:
+- What I did (steps): <STEPS>
+- Expected: <EXPECTED>
+- Actual: <ACTUAL>
+- Severity from user perspective: blocker / important / annoying / cosmetic
+- Evidence: screenshot/log/console... <LINK_OR_TEXT>
+```
+
+## Issue Log template
+Maintain this in the chat once triage starts. Keep it short and stable; update statuses instead of rewording IDs.
+This should be printed as the final section of every assistant reply after triage starts (mini-ritual / footer).
+
+```
+Issue Log (last updated: <DATE>)
+
+OPEN / IN_PROGRESS
+- ISS-001 [Category: ...] [S1/P1] [Status: OPEN] <Summary>
+- ISS-002 [Category: ...] [S0/P0] [Status: IN_PROGRESS] <Summary>
+
+FIXED_PENDING_VERIFY
+- ISS-003 [Category: ...] [S2/P2] [Status: FIXED_PENDING_VERIFY] <Summary> (needs user verification)
+
+VERIFIED
+- ISS-00X ...
+
+DEFERRED
+- ISS-00Y [Reason: ...] (explicit user confirmation)
+```
+
 ## Project State Summary template
 ```
 Date and context version: <DATE>
@@ -124,6 +160,7 @@ Done: <DONE_LIST>
 In progress: <IN_PROGRESS_LIST>
 Decisions and tradeoffs: <DECISIONS>
 Open questions: <QUESTIONS>
+Issue Log snapshot: <OPEN_AND_PENDING_AND_DEFERRED>
 ASSUMPTIONS: <ASSUMPTIONS_LIST>
 Risks and blockers: <RISKS>
 Next steps: <NEXT_STEPS>

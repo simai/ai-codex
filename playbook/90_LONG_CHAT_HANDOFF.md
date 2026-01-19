@@ -13,6 +13,7 @@ Keywords: long chat, handoff, export chat, project summary, context snapshot, re
 
 ## Outputs
 - Project state summary using `TEMPLATES.md`.
+- Current Issue Log snapshot: OPEN items, FIXED_PENDING_VERIFY items, and DEFERRED items with reasons.
 - Near-term next steps and dependencies.
 - Instructions for chat export and restart in a new session.
 - Decision log with tradeoffs and declined options.
@@ -22,7 +23,7 @@ Keywords: long chat, handoff, export chat, project summary, context snapshot, re
 Apply `01_CORE.md` and active profiles. Gather key facts: goals, done, in progress, blockers, risks, and checks. Confirm the current archive.
 end of step #1
 #2
-Produce a state summary using the template: context, decision log (tradeoffs and declined options), open questions, next steps, links to spec, roadmap, tests, recorded ASSUMPTIONS, archive name with timestamp.
+Produce a state summary using the template: context, decision log (tradeoffs and declined options), open questions, next steps, links to spec, roadmap, tests, recorded ASSUMPTIONS, Issue Log snapshot, archive name with timestamp.
 end of step #2
 #3
 Offer chat export to MD or PDF via a browser extension such as ChatGPT Exporter or equivalent. Provide the summary and archive name.

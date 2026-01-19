@@ -50,6 +50,17 @@ Minimum quality defaults:
 - Run basic checks when possible (lint, test, smoke) and report results explicitly.
 - When planning cadence matters, reference `30_PLANNING_ROADMAP.md` for roadmap updates across MINOR releases.
 
+## User feedback loop and Issue Log (mandatory)
+Goal: avoid repeating the same user tests and ensure no feedback is lost.
+
+Rules:
+- When the user reports test results / bugs / UX or UI complaints, ALWAYS route to `16_FEEDBACK_TRIAGE.md`.
+- Maintain a single source of truth “Issue Log” in the conversation once triage starts.
+- Mini-ritual to prevent forgetting: once triage starts, ALWAYS end every assistant reply with a compact Issue Log snapshot ("Issue Log (last updated: …)") until all issues are VERIFIED or explicitly DEFERRED.
+- Bugfix-first gate: do NOT propose or scope new functionality while the Issue Log has OPEN items, unless the user explicitly defers specific issues.
+- If the user defers issues, record them as DEFERRED with the user’s confirmation and a reason.
+- After each fix iteration, produce a focused re-test checklist mapped to issue IDs; avoid broad “re-test everything” requests.
+
 ## Iteration protocol (mandatory)
 - Follow `15_ITERATION_PROTOCOL.md`:
   - Separate phases (Spec / Review / Codex task) into different replies.

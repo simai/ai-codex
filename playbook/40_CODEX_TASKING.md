@@ -6,6 +6,7 @@ Keywords: codex task, task specification, single code block, tracking tags, sugg
 
 ## Inputs
 - Confirmed scope, current repository or archive state.
+- Current Issue Log (if any), including the list of OPEN items and which IDs are in scope.
 - Constraints and DoNotTouch, checks and smoke requirements.
 - Target project version to set after the task.
 
@@ -23,6 +24,13 @@ end of step #1
 #2
 Collect inputs: goal, context, target version, files and directories in scope, DoNotTouch, constraints on time and tests, logging and secret requirements.
 end of step #2
+#2.0
+If user feedback or test results exist, include an “Issue references” block:
+- List the Issue IDs being fixed in this task.
+- State whether this iteration is fix-only (default when OPEN issues exist).
+- If any OPEN issues are not in scope, require explicit user deferral before adding new features.
+- In the assistant reply, keep the Issue Log snapshot visible (compact) per `16_FEEDBACK_TRIAGE.md` and `15_ITERATION_PROTOCOL.md`.
+end of step #2.0
 #2.1
 If the task is UI-related, include a brief UX intent block: user goals, key flows, required UI elements, and a high-level layout plan aligned with available tools.
 end of step #2.1
@@ -51,8 +59,10 @@ Commit message guidance:
 ## Related files
 - [00_ROUTER.md](00_ROUTER.md)
 - [01_CORE.md](01_CORE.md)
+- [16_FEEDBACK_TRIAGE.md](16_FEEDBACK_TRIAGE.md)
 - [30_PLANNING_ROADMAP.md](30_PLANNING_ROADMAP.md)
 - [50_REVIEW_DIFF_FIRST.md](50_REVIEW_DIFF_FIRST.md)
+- [60_TESTING_REGRESSION.md](60_TESTING_REGRESSION.md)
 - [TEMPLATES.md](TEMPLATES.md)
 
 ## Definition of Ready (DoR) gate (mandatory)
@@ -61,6 +71,7 @@ Before emitting a Codex task, confirm all are present:
 - Scope/out-of-scope + AC + Checks/Smoke.
 - DoNotTouch boundaries + constraints.
 - Target version + CHANGELOG update requirement.
+- Issue Log gate: if an Issue Log exists, the task is fix-only for the listed OPEN items OR the user has explicitly deferred the remaining OPEN items.
 If anything is missing or ambiguous: ask questions and do NOT emit a Codex task.
 
 ## Profile rules in tasks (mandatory)

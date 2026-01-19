@@ -15,6 +15,7 @@ Situations and routing:
 | Requirements or project spec needed | Need a specification and boundaries | [01_CORE.md](01_CORE.md), [20_PROJECT_SPEC_GUIDE.md](20_PROJECT_SPEC_GUIDE.md), [30_PLANNING_ROADMAP.md](30_PLANNING_ROADMAP.md), [TEMPLATES.md](TEMPLATES.md) | Structured spec draft, missing info questions, agreed scope and out-of-scope |
 | Codex task formulation needed | Need to craft a task for Codex | [01_CORE.md](01_CORE.md), [40_CODEX_TASKING.md](40_CODEX_TASKING.md), [PROFILES_OVERVIEW.md](PROFILES_OVERVIEW.md), [TEMPLATES.md](TEMPLATES.md) | Self-contained task in one code block, checks and smoke, DoNotTouch list and expected response |
 | Codex result or new archive requires review | Diff or archive needs quality review | [01_CORE.md](01_CORE.md), [12_ARCHIVE_PROTOCOL.md](12_ARCHIVE_PROTOCOL.md), [50_REVIEW_DIFF_FIRST.md](50_REVIEW_DIFF_FIRST.md), [60_TESTING_REGRESSION.md](60_TESTING_REGRESSION.md) | Changed files list, risk notes, decision to accept or request changes or split scope, test plan |
+| User test feedback / bug reports | User posts test results, issues, UX/UI complaints, “still broken” messages | [01_CORE.md](01_CORE.md), [16_FEEDBACK_TRIAGE.md](16_FEEDBACK_TRIAGE.md), [60_TESTING_REGRESSION.md](60_TESTING_REGRESSION.md) | Updated Issue Log with categories and priorities, clarifying questions, fix-only next iteration plan, focused re-test checklist |
 | Next MINOR planning and roadmap | Need goals for upcoming versions | [01_CORE.md](01_CORE.md), [30_PLANNING_ROADMAP.md](30_PLANNING_ROADMAP.md), [70_AUDITS.md](70_AUDITS.md) | MINOR goals, decomposition, updated roadmap and dependencies, audit recommendations |
 | Long chat or context handoff | Session change or handoff required | [01_CORE.md](01_CORE.md), [90_LONG_CHAT_HANDOFF.md](90_LONG_CHAT_HANDOFF.md), [12_ARCHIVE_PROTOCOL.md](12_ARCHIVE_PROTOCOL.md), [TEMPLATES.md](TEMPLATES.md) | State summary, confirmed next steps, instructions for new chat and current archives |
 | Archive packaging or transfer | Need to package and hand over safely | [01_CORE.md](01_CORE.md), [12_ARCHIVE_PROTOCOL.md](12_ARCHIVE_PROTOCOL.md), [PROFILES_OVERVIEW.md](PROFILES_OVERVIEW.md) | Archive with unique name and exclusions, safety guidance and restore notes |
@@ -40,3 +41,4 @@ If information is missing, ask clarifying questions and record ASSUMPTIONS expli
 
 ## Related files (extended)
 - [15_ITERATION_PROTOCOL.md](15_ITERATION_PROTOCOL.md)
+- [16_FEEDBACK_TRIAGE.md](16_FEEDBACK_TRIAGE.md)

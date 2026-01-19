@@ -18,3 +18,4 @@
 - Formalize handoff rituals between chats and histories
 - Add guidance for regular retrospectives and audits
 - Update summary templates with measurement focus
+- Add a fix-first feedback triage loop with an Issue Log to prevent repeated re-testing

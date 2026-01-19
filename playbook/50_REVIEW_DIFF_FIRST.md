@@ -13,6 +13,7 @@ Keywords: diff-first review, file changes, scope boundaries, unexpected changes,
 - Summary of changes and risks.
 - Checklist findings across security, logic, errors, observability, performance, tests, and docs.
 - Decision: accept, request changes, or split scope.
+- If an Issue Log exists: map each addressed issue ID to concrete file changes and list what remains OPEN or FIXED_PENDING_VERIFY.
 
 ## Procedure (steps)
 #1
@@ -31,6 +32,7 @@ end of step #4
 - When a project archive is provided, reconstruct the behavior end-to-end from the code and identify potential issues and gaps.
 - When a task specifies required functionality, verify the implementation section-by-section, building a full picture of how the feature works.
 - When requirements exist, map each requirement to concrete changes and verification steps, and record any gaps.
+- If a user Issue Log exists, map each fixed issue ID to evidence (file paths or code snippets) and list the focused re-test steps.
 
 ## Checklists or message templates
 - "Changed files: <FILE_LIST>. Impact: <IMPACT>. Findings: security <ITEMS>, logic <ITEMS>, perf <ITEMS>, tests <ITEMS>, docs <ITEMS>, version or changelog <STATUS>. Decision: <DECISION>."

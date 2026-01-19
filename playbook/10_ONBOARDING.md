@@ -51,3 +51,7 @@ During onboarding, always do:
 Output a short "Standards Contract" proposal:
 - Create or request a `PROJECT_STANDARDS.md` (template in `TEMPLATES.md`) that captures non-negotiables (structure, localization, security, UX rules).
 - Treat it as the reference for every Codex task and every review.
+
+Also confirm the feedback loop:
+- How the user will report test results (text, screenshots, logs).
+- That the assistant will maintain an Issue Log with priorities and will not move to new features until issues are closed or explicitly deferred.

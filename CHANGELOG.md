@@ -2,6 +2,42 @@
 
 Rule: cumulative log, newest versions on top. Keep sections Added, Changed, Fixed, Security, Docs for every version.
 
+## [0.7.1] - 2026-01-18
+### Added
+- Added a mandatory “Issue Log footer” mini-ritual: once triage starts, every assistant reply must end with a compact Issue Log snapshot to prevent forgetting feedback.
+
+### Changed
+- Clarified in the iteration protocol and Codex tasking guidance how to keep the Issue Log snapshot visible even when producing a Codex task.
+
+### Fixed
+- N/A
+
+### Security
+- N/A
+
+### Docs
+- Updated triage and templates documentation to enforce the Issue Log snapshot footer.
+
+## [0.7.0] - 2026-01-18
+### Added
+- Added `playbook/16_FEEDBACK_TRIAGE.md` to convert user test feedback into a categorized, prioritized Issue Log and to enforce a fix-first iteration loop.
+- Added Issue Log and User Test Feedback templates to `playbook/TEMPLATES.md`.
+
+### Changed
+- Router now routes “user test feedback / bug reports” to triage before any new planning or tasking.
+- CORE + Iteration Protocol now include a bugfix-first gate: do not move to new functionality while OPEN issues exist unless explicitly deferred.
+- Codex tasking now requires issue references when test feedback exists and enforces fix-only iterations by default.
+- Long chat handoff now includes an Issue Log snapshot so context isn’t lost between chats.
+
+### Fixed
+- N/A
+
+### Security
+- Security and data-loss issues are explicitly treated as P0 in triage to avoid accidental deprioritization.
+
+### Docs
+- Updated Knowledge upload list, README, USAGE, and ROADMAP for the feedback triage loop.
+
 ## [0.6.0] - 2026-01-18
 ### Added
 - Added `playbook/15_ITERATION_PROTOCOL.md` to enforce analysis-first gating (spec/review vs Codex task separation) and Definition of Ready (DoR).

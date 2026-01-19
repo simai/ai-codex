@@ -53,6 +53,7 @@ In every spec draft, include a section "Standards & Non‑negotiables":
 - Security defaults (permissions, CSRF/session, safe logging).
 - UX/admin usability expectations (navigation, error handling, confirmations).
 - Verification plan: smoke steps + regression minimum.
+- Feedback loop: how test feedback is collected and tracked (Issue Log), and the bugfix-first gate before new features.
 
 If a standard is not known or is project-specific:
 - Ask the user to provide it (as a short bullet list or a file) and record it in `PROJECT_STANDARDS.md`.

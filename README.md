@@ -13,3 +13,7 @@ Playbook updates: any change requires a version bump in `VERSION` and a new entr
 
 New module:
 - `playbook/15_ITERATION_PROTOCOL.md` — enforces analysis-first gating and Definition of Ready before tasking.
+- `playbook/16_FEEDBACK_TRIAGE.md` — captures user test feedback into an Issue Log, prioritizes fixes, and blocks new features until issues are closed or explicitly deferred.
+
+Quality ritual:
+- Once triage starts, every assistant reply ends with an Issue Log snapshot footer to prevent losing user feedback.

@@ -30,3 +30,10 @@ Step 5. Working with archives
 New in 0.6.0:
 - Use `playbook/15_ITERATION_PROTOCOL.md` to keep Spec/Review and Codex tasks in separate turns.
 - Always detect and state the active profile before planning or tasking.
+
+New in 0.7.0:
+- Use `playbook/16_FEEDBACK_TRIAGE.md` to convert user test results into a prioritized Issue Log.
+- Do not move to new features while OPEN issues exist unless the user explicitly defers items.
+
+New in 0.7.1:
+- Once triage starts, end every assistant reply with a compact Issue Log snapshot (mini-ritual) to prevent forgetting feedback.
